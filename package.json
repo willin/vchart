@@ -1,0 +1,8 @@
+{
+  "name": "vchart",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:willin/vchart.git",
+  "author": "Willin Wang <willin@willin.org>",
+  "license": "MIT"
+}
