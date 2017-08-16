@@ -100,7 +100,7 @@ exports default {
 </script>
 ```
 
-## Browser / 浏览器中使用
+### Browser / 浏览器中使用
 
 ```html
 <!doctype html>
@@ -146,6 +146,63 @@ exports default {
 </script>
 </body>
 </html>
+```
+
+### Animation / 动画
+
+Demo / 演示: https://jsfiddle.net/willin/esvw0q91/
+
+常用的三种动画:
+
+- `dashoffset` 跑马灯
+- `bouncing-stroke` 弹簧
+- `exploding-stroke` 爆炸
+
+```css
+* {
+  transform-origin: 0px 0px 0px;
+}
+.ct-line {
+  stroke-dasharray: 5px;
+  /* change animation name */
+  animation: dashoffset 1s linear infinite;
+}
+
+@keyframes dashoffset  {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+
+  100% {
+    stroke-dashoffset: -20px;
+  }
+}
+
+ @keyframes bouncing-stroke  {
+  0% {
+    stroke-width: 5px;
+  }
+
+  50% {
+    stroke-width: 10px;
+  }
+
+  100% {
+    stroke-width: 5px;
+  }
+}
+
+@keyframes exploding-stroke  {
+  0% {
+    stroke-width: 2px;
+    opacity: 1;
+  }
+
+  100% {
+    stroke-width: 20px;
+    opacity: 0;
+  }
+}
 ```
 
 ## License
