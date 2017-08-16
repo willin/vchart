@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   output: {
-    filename: path.resolve(__dirname, './dist/vchart.min.js'),
+    filename: './dist/vchart.min.js',
     library: 'vchart',
     libraryTarget: 'umd'
   },

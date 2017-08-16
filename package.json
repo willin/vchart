@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "Vue Chartist.js Component",
   "main": "./dist/vchart.min.js",
+  "scripts": {
+    "start": "npm run prepare && http-server -c0 ./dist",
+    "prepare": "webpack --progress --hide-modules"
+  },
   "dependencies": {
     "chartist": "latest"
   },
@@ -13,8 +17,10 @@
     "eslint": "4.3",
     "eslint-config-dwing": "^1.1.0",
     "eslint-plugin-vue": "^3.11.0",
+    "http-server": "^0.10.0",
     "vue": "^2.4.2",
     "vue-loader": "^13.0.4",
+    "vue-template-compiler": "^2.4.2",
     "webpack": "^3.5.4"
   },
   "keywords": [
