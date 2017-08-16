@@ -1,7 +1,27 @@
 {
   "name": "vchart",
   "version": "0.0.0",
-  "main": "index.js",
+  "description": "Vue Chartist.js Component",
+  "main": "./dist/vchart.min.js",
+  "dependencies": {
+    "chartist": "latest"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "4.3",
+    "eslint-config-dwing": "^1.1.0",
+    "eslint-plugin-vue": "^3.11.0",
+    "vue": "^2.4.2",
+    "vue-loader": "^13.0.4",
+    "webpack": "^3.5.4"
+  },
+  "keywords": [
+    "vue-component",
+    "vuejs",
+    "chartist"
+  ],
   "repository": "git@github.com:willin/vchart.git",
   "author": "Willin Wang <willin@willin.org>",
   "license": "MIT"
