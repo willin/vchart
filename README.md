@@ -71,7 +71,7 @@ Demo / 在线示例: <https://vchart.js.cool/>
 <vchart
     ratio="ct-major-second"
     :type="type"
-    :data="chartData"
+    :data="data"
     :options="options" >
 </vchart>
 </template>
@@ -85,9 +85,15 @@ exports default {
   },
   data() {
     return {
-      data: {},
-      options: {},
-      type: 'Line'
+       data: {
+            labels: ["周一", "周二", "周三", "周四", "周五"],
+            series: [[4, 3.8, 3, 5, 4.1]]
+        },
+        type: 'Line',
+        options: {
+            fullWidth: true,
+            lineSmooth: false
+        }
     };
   }
 }
@@ -126,8 +132,8 @@ exports default {
     data() {
         return {
             data: {
-                labels: '["周一", "周二", "周三", "周四", "周五"]',
-                series: "[4, 3.8, 3, 5, 4.1]"
+                labels: ["周一", "周二", "周三", "周四", "周五"],
+                series: [[4, 3.8, 3, 5, 4.1]]
             },
             type: 'Line',
             options: {

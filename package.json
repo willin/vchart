@@ -1,6 +1,6 @@
 {
   "name": "vchart",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Vue Chartist.js Component",
   "main": "./dist/vchart.min.js",
   "scripts": {
