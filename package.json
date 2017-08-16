@@ -1,11 +1,12 @@
 {
   "name": "vchart",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Vue Chartist.js Component",
   "main": "./dist/vchart.min.js",
   "scripts": {
-    "start": "npm run prepare && http-server -c0 ./dist",
-    "prepare": "webpack --progress --hide-modules"
+    "start": "npm run prepare && http-server -c0 .",
+    "prepare": "NODE_ENV=production webpack --progress --hide-modules",
+    "analyze": "NODE_ENV=production webpack --progress --hide-modules --config webpack.analyze.js"
   },
   "dependencies": {
     "chartist": "latest"
@@ -21,7 +22,8 @@
     "vue": "^2.4.2",
     "vue-loader": "^13.0.4",
     "vue-template-compiler": "^2.4.2",
-    "webpack": "^3.5.4"
+    "webpack": "^3.5.4",
+    "webpack-bundle-analyzer": "^2.9.0"
   },
   "keywords": [
     "vue-component",

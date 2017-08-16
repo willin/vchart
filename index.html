@@ -3,22 +3,23 @@
     <head>
         <title>Vchart Example</title>
         <link rel="stylesheet" href="//unpkg.com/chartist/dist/chartist.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" />
     </head>
     <body>
+        <a class="github-fork-ribbon" href="https://github.com/willin/vchart" title="Fork me on GitHub" target="_blank">Fork me on GitHub</a>
         <div id="app">
-            <h1>Plugin chartist-vuejs examples</h1>
-            <h2>Charts reloaded thanks Vue.js</h2>
+            <h2>VChart 示例</h2>
             <section>
 
                 <div class="customize">
-                    <label>Type : </label>
+                    <label>类型 : </label>
                     <Select v-model="type">
                         <option>Line</option>
                         <option>Bar</option>
                     </select>
-                    <label>Labels : </label>
+                    <label>标签 : </label>
                     <input type="text" v-model.lazy="data.labels">
-                    <label>Series : </label>
+                    <label>数据 : </label>
                     <input type="text" v-model.lazy="data.series">
                 </div>
 
@@ -45,9 +46,23 @@
                     :options="distributedSeriesOptions" >
                 </chart>
             </section>
+            <section>
+                    <vchart
+                        ratio="ct-major-second"
+                        type="Pie"
+                        data="{}"
+                        empty="没有数据"
+                        :options="distributedSeriesOptions" >
+                    </chart>
+                </section>
         </div>
+        <footer>
+            <p>Copyright &copy; <a href="https://willin.wang" target="_blank">Willin Wang</a> 2017</p>
+        </footer>
         <script src="//unpkg.com/vue"></script>
-        <script src="./vchart.min.js"></script>
+        <script src="//unpkg.com/chartist"></script>
+        <script src="//unpkg.com/vchart"></script>
+        <!-- <script src="./dist/vchart.min.js"></script> -->
         <script>
           new Vue({
             el: '#app',
@@ -57,7 +72,7 @@
             data() {
                 return {
                     data: {
-                        labels: '["Mon", "Tue", "Wed", "Thu", "Fri"]',
+                        labels: '["周一", "周二", "周三", "周四", "周五"]',
                         series: "[4, 3.8, 3, 5, 4.1]"
                     },
                     type: 'Line',
