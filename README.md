@@ -112,12 +112,14 @@ exports default {
 <body>
 
 <!-- Example / 示例 -->
-<vchart
-    ratio="ct-major-second"
-    :type="type"
-    :data="chartData"
-    :options="options" >
-</vchart>
+<div id="app">
+  <vchart
+      ratio="ct-major-second"
+      :type="type"
+      :data="chartData"
+      :options="options" >
+  </vchart>
+</div>
 
 <!-- Import Scripts / 引用JS资源 -->
 <script src="//unpkg.com/vue"></script>
